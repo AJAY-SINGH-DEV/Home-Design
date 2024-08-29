@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title>Uploadreview</title>
+    <link rel="stylesheet" href="css/Uploadreviewstyle.css">
+</head>
+<body>
+    <div class="back active" herf="Index.html">
+        <a href="Index.html" class="back active"></a>
+    </div>
+    <div class="register-photo">
+        <div class="form-container">
+            <div class="image-holder">
+            </div>
+            <form method="post">
+                <h2 class="text-center"><strong><p><input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none;"></p>
+                    <p><label for="file" style="cursor: pointer;">Upload Image</label></p>
+                    <p><img id="output" width="200" /></p>
+                    <script>
+                    var loadFile = function(event) {
+                        var image = document.getElementById('output');
+                        image.src = URL.createObjectURL(event.target.files[0]);
+                        };
+                    </script>
+                <div class="form-group"><input class="form-control" type="name" name="name" placeholder="Name"></div>
+                <div class="form-group"><input class="form-control" type="lastname" name="lastname" placeholder="Last Name"></div>
+                <div class="form-group"><input class="form-control" type="email" name="email" placeholder="Email"></div>
+                <div class="form-group"><textarea type="message" id="message" name="txt-box" placeholder="&nbsp;&nbsp; Your message here" required></textarea></div>
+                    
+                <div class="rating">
+                    <input type="radio" name="rating" value="5" id="5"><label for="5">☆</label>
+                    <input type="radio" name="rating" value="4" id="4"><label for="4">☆</label>
+                    <input type="radio" name="rating" value="3" id="3"><label for="3">☆</label>
+                    <input type="radio" name="rating" value="2" id="2"><label for="2">☆</label>
+                    <input type="radio" name="rating" value="1" id="1"><label for="1">☆</label>
+                </div>
+                <div class="form-group"><button class="btn" type="submit">Submit</button></div></strong></h2></form>
+        </div>
+    </div>
+      
+</body>
+</html>

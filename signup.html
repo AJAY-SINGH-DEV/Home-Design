@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/signupstyle.css">
+</head>
+<body>
+<form>
+    <div class="sign-upbox">
+    <h1>Sign Up</h1>
+    <input type="text" name="" placeholder="Username">
+    <input type="text" name="" list="tech" placeholder="Want to">
+    <datalist id="tech">
+        <option>Decorate House</option>
+        <option>Decorate Multiple Room</option>
+        <option>Decorate Single Room</option>
+    </datalist>
+    <script>  
+      function matchPassword() {  
+        var pw1 = document.getElementById("pswd1");  
+        var pw2 = document.getElementById("pswd2");  
+        if(pw1 != pw2)  
+        {   
+          alert("Passwords did not match");  
+        } else {  
+          alert("Password created successfully");  
+        }  
+      }  
+      </script>
+    <input type="email" name="" placeholder="Email">
+    <input type="Phone Number" name="" placeholder="Phone Number" >
+    <label for="password"></label>
+    <input type="password" name="pswd1" id="password" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+    <label for="cnfrm-password"></label>
+    <input type="password" name="pswd2" id="cnfrm-password" placeholder="Conform Password">
+    <p id="message"></p>
+    
+    <!?Click to validate confirm password -->  
+    <button type = "submit" onclick="matchPassword()">Signup</button>  
+    </div>
+    <script src="script.js"></script>
+    <p class="part-2">Already have an account? <a href="loging.html">Login here</a></p>
+</form>
+  
+</body>
+</html>
